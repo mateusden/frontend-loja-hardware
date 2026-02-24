@@ -3076,7 +3076,7 @@
           const loadingOverlay = document.getElementById("loadingOverlay");
           if (loadingOverlay) loadingOverlay.style.display = "flex";
 
-          const apiUrl = "http://localhost:3000/api/products";
+          const apiUrl = "https://17cc-2804-554-225-a600-6035-bba1-9eb-2de8.ngrok-free.app/api/products";
           const resp = await fetch(apiUrl);
           const result = await resp.json();
 
@@ -3123,7 +3123,7 @@
           let produto = null;
           try {
             const resp = await fetch(
-              `http://localhost:3000/api/products/${idProduto}`
+              `https://17cc-2804-554-225-a600-6035-bba1-9eb-2de8.ngrok-free.app/api/products/${idProduto}`
             );
             const result = await resp.json();
 
