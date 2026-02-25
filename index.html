@@ -3077,7 +3077,11 @@
           if (loadingOverlay) loadingOverlay.style.display = "flex";
 
           const apiUrl = "https://5bc5-2804-554-225-a600-6035-bba1-9eb-2de8.ngrok-free.app/api/products?ngrok-skip-browser-warning=true";
-          const resp = await fetch(apiUrl);
+          const resp = await fetch(apiUrl, {
+            headers: new Headers ({
+              "ngrok-skip-browser-warning": "69420",
+            })
+          });
           const result = await resp.json();
 
           if (result.success && result.data && result.data.length > 0) {
