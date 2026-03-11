@@ -2114,7 +2114,7 @@
 
           let imagemUrl = item.imagem_url || "";
           if (item.imagem_filename && !imagemUrl.startsWith("http")) {
-            imagemUrl = `http://localhost:3000/uploads/${item.imagem_filename}`;
+            imagemUrl = ` https://28c2-2804-554-225-a600-35ed-315c-5efd-a0b6.ngrok-free.app/uploads/${item.imagem_filename}`;
           }
           if (!imagemUrl) {
             imagemUrl =
@@ -2534,7 +2534,7 @@
               product_id: item.id
             };
 
-            const resp = await fetch("http://localhost:3000/api/orders/create", {
+            const resp = await fetch(" https://28c2-2804-554-225-a600-35ed-315c-5efd-a0b6.ngrok-free.app/api/orders/create", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
@@ -2876,7 +2876,7 @@
             product.imagem_filename &&
             (!imagemUrl || !imagemUrl.startsWith("http"))
           ) {
-            imagemUrl = `http://localhost:3000/uploads/${product.imagem_filename}`;
+            imagemUrl = ` https://28c2-2804-554-225-a600-35ed-315c-5efd-a0b6.ngrok-free.app/uploads/${product.imagem_filename}`;
           }
 
           if (!imagemUrl) {
@@ -3200,7 +3200,7 @@
           produto.imagem_filename &&
           (!imagemUrl || !imagemUrl.startsWith("http"))
         ) {
-          imagemUrl = `http://localhost:3000/uploads/${produto.imagem_filename}`;
+          imagemUrl = ` https://28c2-2804-554-225-a600-35ed-315c-5efd-a0b6.ngrok-free.app/uploads/${produto.imagem_filename}`;
         }
         if (!imagemUrl) {
           imagemUrl =
@@ -3597,7 +3597,7 @@
         try {
           const token = localStorage.getItem("token");
           if (token) {
-            const resp = await fetch("http://localhost:3000/api/users/logout", {
+            const resp = await fetch(" https://28c2-2804-554-225-a600-35ed-315c-5efd-a0b6.ngrok-free.app/api/users/logout", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
